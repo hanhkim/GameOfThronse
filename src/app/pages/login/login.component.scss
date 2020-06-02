@@ -1,0 +1,60 @@
+.login-page {
+    background-image: url("../../../assets/images/background.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    height: 100%;
+    padding: 100px;
+
+    .title-app {
+        margin: 0px;
+        position: absolute;
+        top: 30%;
+        color: #ff1798;
+        font-size: 100px;
+        font-family: cursive;
+        outline: none;
+    }
+
+    .login-form {
+        float: right;
+        min-height: 300px;
+        width: 300px;
+        background-color: #C4C4C4;
+        border-radius: 20px;
+        padding: 50px 35px;
+        display: inline-block;
+        text-align: center;
+        box-sizing: content-box;
+        margin: 0px;
+
+        .title {
+            color: #187A28;
+            margin: 0px;
+            font-size: 50px;
+            line-height: 50px;
+        }
+
+        p {
+            margin: 0px;
+        }
+
+        input, button {
+            height: 60px;
+            width: 100%;
+            padding: 0px 20px;
+            border: none;
+            outline: none;
+            font-size: 18px;
+
+            &.btn-style {
+                background-color: green;
+                color: #FFFFFF;
+
+                &:hover {
+                    background-color: greenyellow;
+                }
+            }
+        }
+
+    }
+}

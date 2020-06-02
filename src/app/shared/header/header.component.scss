@@ -1,0 +1,15 @@
+.header {
+    background-color: #187A28;
+    color: #FFFFFF;
+    padding: 8px 100px;
+
+    .nav-item {
+        min-width: 150px;
+        font-weight: bold;
+        text-align: center;
+    }
+
+    .active{
+        background-color: #0DCB2B;
+    }
+}

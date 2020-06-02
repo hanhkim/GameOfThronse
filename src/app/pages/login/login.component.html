@@ -1,0 +1,15 @@
+<div class="login-page">
+    <p class="title-app">Game Of Thrones</p>
+    <form class="login-form form-group" [formGroup]="loginForm" (ngSubmit)="login()">
+        <h2 class="title"> Login </h2>
+        <p *ngIf="!errBoolean">Please enter username and password</p>
+        <p *ngIf="errBoolean" style="color:red"> {{ errLoginMessage }}</p>
+        <br>
+        <input placeholder="enter username" formControlName="username">
+        <br><br>
+        <input type="password" placeholder="enter password" formControlName="password">
+        <br><br>
+        <button type="submit" class="btn-style">Login</button>
+    </form>
+</div>
+<app-footer></app-footer>

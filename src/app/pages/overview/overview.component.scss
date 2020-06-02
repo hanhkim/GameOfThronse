@@ -1,0 +1,40 @@
+.body-content {
+    position: relative;
+    height: 100%;
+    text-align: center;
+
+    .title {
+        color: #187A28;
+        font-size: 36px;
+        font-weight: bold;
+        padding: 100px;
+    }
+    .content-container {
+        position: absolute;
+        top: 30%;
+        width: 100%;
+
+        .resource-box {
+            width: 300px;
+            border: 1px solid;
+            height: 300px;
+            box-sizing: content-box;
+            line-height: 300px;
+            color: #FFFFFF;
+            font-weight: bold;
+            font-size: 36px;
+        }
+
+        .black-box {
+            background-color: #4F4F4F;
+        }
+
+        .green-box {
+            background-color: #3B8077;
+        }
+
+        .yellow-box {
+            background-color: #C7CA22;
+        }
+    }
+}
