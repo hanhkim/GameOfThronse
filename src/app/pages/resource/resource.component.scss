@@ -1,6 +1,23 @@
 .body-content {
     position: relative;
     height: 100%;
+    padding: 50px 100px;
     
-    
+    .wrapper-resource-item {
+
+        .wrapper {
+            display: flex;
+            flex-wrap: wrap;
+
+            .resource-item {
+                border: 1px solid;
+                display: inline-block;
+                flex-grow: 1;
+                height: 200px;
+                width: calc(100%/5 - 10px);
+                max-width: calc(100%/5 - 10px);;
+                margin: 5px;
+            }
+        }
+    }
 }

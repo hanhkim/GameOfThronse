@@ -1,0 +1,64 @@
+.header-resource {
+    height: 100px;
+    background-color: blue($color: #000000);
+
+    .title-resource {
+        color: #187A28;
+        font-size: 36px;
+        float: left;
+    }
+
+    .fearture-resource {
+        width: 700px;
+        max-width: 800px;
+        float: right;
+        text-align: right;
+
+        .container {
+            width: 400px;
+            display: inline-block;
+            margin: 10px 20px;
+        }
+
+        .btn-search {
+            background: #424242;
+            border-radius: 0;
+            color: #fff;
+            border-width: 1px;
+            border-style: solid;
+            border-color: #1c1c1c;
+            outline: none;
+          }
+          .btn-search:link, .btn-search:visited {
+            color: #fff;
+          }
+          .btn-search:active, .btn-search:hover {
+            background: #1c1c1c;
+            color: #fff;
+          }
+
+        .btn-filter {
+            cursor: pointer;
+            display: inline-block;
+            background: green;
+            border: 0px;
+            height: 50px;
+            color: #FFFFFF;
+            width: 200px;
+            padding: 0px 20px;
+
+            &:hover {
+                background-color: greenyellow;
+                border: 0px;
+                outline: none;
+
+            }
+
+            &:focus {
+                border: 0px;
+            }
+          }
+    }
+
+
+}

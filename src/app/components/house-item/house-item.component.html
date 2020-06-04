@@ -1,0 +1,35 @@
+<!-- <div class="resource-item">
+    <p class="title-item">{{house.name}}</p>
+    <p class="underline"></p>
+    <div class="subtitle"> {{house.region}} </div>
+    <div class="description">{{house.coatOfArms}}</div>
+</div> -->
+<mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+    <ng-container matColumnDef="name">
+        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="region">
+        <mat-header-cell *matHeaderCellDef>Region</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="coatOfArms">
+        <mat-header-cell *matHeaderCellDef>Coat Of Arms</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <ng-container matColumnDef="words">
+        <mat-header-cell *matHeaderCellDef>Words</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+    
+    <ng-container matColumnDef="currentLord">
+        <mat-header-cell *matHeaderCellDef>Current Lord</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    </ng-container>
+
+    <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
+    <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+</mat-table>
