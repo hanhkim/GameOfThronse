@@ -1,12 +1,6 @@
 <app-header></app-header>
 <div class="body-content">
-    <app-resource-header></app-resource-header>
-    <!-- <div class="wrapper-resource-item">
-        <div class="wrapper">
-            <div *ngFor="let item of HousesList" class="resource-item">
-            </div>
-        </div>
-    </div> -->
-    <app-house-item [HouseList]="HousesList"></app-house-item>
+    <app-resource-header titleResourcePage="{{typeResource}}"></app-resource-header>
+    <app-house-item [typeResource]="typeResource"></app-house-item>
 </div>
 <app-footer></app-footer>   

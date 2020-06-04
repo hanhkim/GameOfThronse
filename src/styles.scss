@@ -1,19 +1,29 @@
 /* Importing Bootstrap SCSS file. */
 @import '~bootstrap/scss/bootstrap';
 
-/* You can add global styles to this file, and also import other style files */
-html {
-    height: 100%;
-    body {
-        margin: 0px;
-        font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-        height: 100%;
-        .space5 {
-        margin-right: 5px;
-    } 
-}
-}
-
-
 html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+body { 
+    margin: 0; 
+    font-family: Roboto, "Helvetica Neue", sans-serif; 
+    
+    .space5 {
+        margin-right: 5px;
+
+    }
+
+    .mat-header-cell {
+        padding: 0px 10px;
+    }
+    
+    .mat-cell {
+        white-space: nowrap;
+        width: 83%;
+        overflow: hidden !important;
+        text-overflow: ellipsis;
+        display: inline-block;
+        line-height: 100%;
+        height: 100%;
+        padding: 15px 10px;
+    }
+    
+}

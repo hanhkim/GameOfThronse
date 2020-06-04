@@ -1,33 +1,27 @@
-<!-- <div class="resource-item">
-    <p class="title-item">{{house.name}}</p>
-    <p class="underline"></p>
-    <div class="subtitle"> {{house.region}} </div>
-    <div class="description">{{house.coatOfArms}}</div>
-</div> -->
+<mat-form-field>
+    <mat-label>Filter</mat-label>
+    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
+  </mat-form-field>
+  
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
-    <ng-container matColumnDef="name">
-        <mat-header-cell *matHeaderCellDef>Name</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    <ng-container matColumnDef="{{displayColumn[0]}}">
+        <mat-header-cell *matHeaderCellDef>{{displayColumn[0] | uppercase}}</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element[displayColumn[0]]}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="region">
-        <mat-header-cell *matHeaderCellDef>Region</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    <ng-container matColumnDef="{{displayColumn[1]}}">
+        <mat-header-cell *matHeaderCellDef>{{displayColumn[1] | uppercase }}</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element[displayColumn[1]]}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="coatOfArms">
-        <mat-header-cell *matHeaderCellDef>Coat Of Arms</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    <ng-container matColumnDef="{{displayColumn[2]}}">
+        <mat-header-cell *matHeaderCellDef>{{ (displayColumn[2] === "coatOfArms" ? "Coat Of Arms" : displayColumn[2]) | uppercase }}</mat-header-cell>
+        <mat-cell class="col-row" *matCellDef="let element">{{element[displayColumn[2]]}}</mat-cell>
     </ng-container>
 
-    <ng-container matColumnDef="words">
-        <mat-header-cell *matHeaderCellDef>Words</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
-    </ng-container>
-    
-    <ng-container matColumnDef="currentLord">
-        <mat-header-cell *matHeaderCellDef>Current Lord</mat-header-cell>
-        <mat-cell *matCellDef="let element">{{element.name}}</mat-cell>
+    <ng-container matColumnDef="{{displayColumn[3]}}">
+        <mat-header-cell *matHeaderCellDef>{{ (displayColumn[3] === "numberOfPage" ? "Num Of Pages" : displayColumn[3]) | uppercase}}</mat-header-cell>
+        <mat-cell *matCellDef="let element">{{element[displayColumn[3]]}}</mat-cell>
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>

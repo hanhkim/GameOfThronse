@@ -3,7 +3,7 @@ export class Book {
     name: string;
     isbn: string;
     author: Array<string>;
-    numberOfPage: number;
+    numberOfPages: number;
     country: string;
     mediaType: string;
     release: string;

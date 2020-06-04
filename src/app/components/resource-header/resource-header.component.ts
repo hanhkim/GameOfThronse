@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
@@ -7,7 +7,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
   styleUrls: ['./resource-header.component.scss']
 })
 export class ResourceHeaderComponent implements OnInit {
-  titleResourcePage : string = 'HOUSES';
+  @Input() titleResourcePage;
   faSearch= faSearch;
   constructor() { }
 

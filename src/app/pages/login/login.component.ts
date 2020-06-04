@@ -27,7 +27,6 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    console.log('login form', this.loginForm)
     if(this.loginForm.invalid) {
       this.errBoolean = true;
       this.errLoginMessage = "Username and Password not empty";
