@@ -2,6 +2,7 @@ import { Component, OnInit, Input } from '@angular/core';
 import { House } from 'src/app/models/house.model';
 import { ResourceService } from 'src/app/services/resource/resource.service';
 import { MatTableDataSource } from '@angular/material/table';
+import { Router } from '@angular/router';
 
 const houseColumn = ["name", "region", "coatOfArms", "words" ];
 const bookColumn = ["name", "isbn", "authors", "numberOfPages"];
@@ -14,11 +15,14 @@ const characterColumn = ["name", "gender", "culture", "born"];
 })
 export class HouseItemComponent implements OnInit {
   @Input() typeResource: any;
+  @Input() textSearch: any;
+  
   displayColumn: Array<string>;
   dataSource: any;
 
   constructor(
-    private resourceService: ResourceService
+    private resourceService: ResourceService,
+    private router: Router
   ) {
   }
 
@@ -48,5 +52,11 @@ export class HouseItemComponent implements OnInit {
   applyFilter(event: Event) {
     const filterValue = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filterValue.trim().toLowerCase();
+  }
+
+  redirectDetailPage(row) {
+    let element = row.url.split(/\//);
+    let id = element[element.length - 1];
+    this.router.navigate([`/${this.typeResource}/${id}`]);
   }
 }

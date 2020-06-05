@@ -2,11 +2,12 @@ export class Book {
     url: string;
     name: string;
     isbn: string;
-    author: Array<string>;
+    authors: Array<string>;
     numberOfPages: number;
     country: string;
     mediaType: string;
-    release: string;
+    released: string;
     characters: Array<string>;
     povCharacters: Array<string>;
+    publisher: string;
 }

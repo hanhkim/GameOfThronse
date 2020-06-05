@@ -17,5 +17,9 @@ export class ResourceService {
   loadListResource(type: string) {
     return this.httpService.get(type);
   }
+
+  getDetailData(url: string) {
+    return this.httpService.get(url);
+  }
 }
  

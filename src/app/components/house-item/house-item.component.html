@@ -1,7 +1,7 @@
 <mat-form-field>
-    <mat-label>Filter</mat-label>
-    <input matInput (keyup)="applyFilter($event)" placeholder="Ex. ium">
-  </mat-form-field>
+    <mat-label>Search: </mat-label>
+    <input class="input-search form-control" matInput (keyup)="applyFilter($event)" placeholder="search in resource" style="width: 300px; margin: 20px 0px;">
+</mat-form-field>
   
 <mat-table [dataSource]="dataSource" class="mat-elevation-z8">
     <ng-container matColumnDef="{{displayColumn[0]}}">
@@ -25,5 +25,5 @@
     </ng-container>
 
     <mat-header-row *matHeaderRowDef="displayColumn"></mat-header-row>
-    <mat-row *matRowDef="let row; columns: displayColumn;"></mat-row>
+    <mat-row (click)="redirectDetailPage(row)" *matRowDef="let row; columns: displayColumn;"></mat-row>
 </mat-table>

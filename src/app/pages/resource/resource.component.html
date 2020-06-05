@@ -1,6 +1,12 @@
 <app-header></app-header>
 <div class="body-content">
-    <app-resource-header titleResourcePage="{{typeResource}}"></app-resource-header>
-    <app-house-item [typeResource]="typeResource"></app-house-item>
+    <div class="header-resource">
+        <div class="title-resource">{{ typeResource | uppercase }}</div>
+        <div class="fearture-resource">
+            <button class="btn-filter">FILTER</button>    
+        </div>
+    </div>
+    
+    <app-house-item [textSearch]="textSearch" [typeResource]="typeResource"></app-house-item>
 </div>
 <app-footer></app-footer>   

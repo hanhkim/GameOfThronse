@@ -1,1 +1,156 @@
-<p>resource-item works!</p>
+<app-header></app-header>
+<div class="body-content">
+    <div class="header-resource">
+        <div class="title-resource">{{this.typeDetailPage[0] == 'books' ? 'BOOKS' : (this.typeDetailPage[0] == 'houses' ? 'HOUSES' : 'CHRACTERS')}}> {{this.data.name}}</div>
+    </div>
+    
+    <!-- CONTENT DETAIL OF BOOK -->
+    <div>DETAIL</div>
+    <div class="content">
+        <div class="left-part">
+           <table *ngIf="this.typeDetailPage[0] == 'books'">
+                <tr>
+                    <th>Name</th>
+                    <td>{{data.name}}</td>
+                </tr>
+                <tr>
+                    <th>Authors</th>
+                    <td>{{data.authors[0]}}</td>
+                </tr>
+                <tr>
+                    <th>ISBN</th>
+                    <td>{{data.isbn}}</td>
+                </tr>
+                <tr>
+                    <th>Number Of Pages</th>
+                    <td>{{data.numberOfPages}}</td>
+                </tr>
+                <tr>
+                    <th>Country</th>
+                    <td>{{data.country}}</td>
+                </tr>
+                <tr>
+                    <th>Publisher</th>
+                    <td>{{data.publisher}}</td>
+                </tr>
+                <tr>
+                    <th>Released</th>
+                    <td>{{data.released}}</td>
+                </tr>
+                <tr>
+                    <th>Media Type</th>
+                    <td>{{data.mediaType}}</td>
+                </tr>
+           </table>
+
+           <table  *ngIf="this.typeDetailPage[0] == 'houses'">
+            <tr>
+                <th>Name:</th>
+                <td>{{data.name}}</td>
+            </tr>
+            <tr>
+                <th>Regions:</th>
+                <td>{{data.region}}</td>
+            </tr>
+            <tr>
+                <th>Coat Of Arms:</th>
+                <td>{{data.coatOfArms}}</td>
+            </tr>
+            <tr>
+                <th>Words:</th>
+                <td>{{data.words}}</td>
+            </tr>
+            <tr>
+                <th>Titles:</th>
+                <td>{{data.titles[0]}}</td>
+            </tr>
+            <tr>
+                <th>Seats:</th>
+                <td>{{data.seats[0]}}</td>
+            </tr>
+            <tr>
+                <th>Founder:</th>
+                <td>{{data.founder}}</td>
+            </tr>
+            <tr>
+                <th>Founded:</th>
+                <td>{{data.founded}}</td>
+            </tr>
+            <tr>
+                <th>Died out:</th>
+                <td>{{data.diedOut}}</td>
+            </tr>
+            <tr>
+                <th>Died out:</th>
+                <td>{{data.mediaType}}</td>
+            </tr>
+            <tr>
+                <th>Go to Current Lord:</th>
+                <td><a href="{{data.currentLord}}">{{data.currentLord}}</a></td>
+            </tr>
+            <tr>
+                <th>Go to over lord:</th>
+                <td><a href="{{data.overlord}}">{{data.overlord}}</a></td>
+            </tr>
+        </table>
+
+        <table  *ngIf="this.typeDetailPage[0] == 'characters'">
+            <tr>
+                <th>Name:</th>
+                <td>{{data.name}}</td>
+            </tr>
+            <tr>
+                <th>Gender:</th>
+                <td>{{data.gender}}</td>
+            </tr>
+            <tr>
+                <th>Culture:</th>
+                <td>{{data.culture}}</td>
+            </tr>
+            <tr>
+                <th>Born:</th>
+                <td>{{data.born}}</td>
+            </tr>
+            <tr>
+                <th>Died:</th>
+                <td>{{data.died}}</td>
+            </tr>
+            <tr>
+                <th>Father:</th>
+                <td>{{data.father}}</td>
+            </tr>
+            <tr>
+                <th>Mother:</th>
+                <td>{{data.mother}}</td>
+            </tr>
+            <tr>
+                <th>Spouse:</th>
+                <td>{{data.spouse}}</td>
+            </tr>
+            <tr>
+                <th>Titles:</th>
+                <td>{{data.titles[0]}}</td>
+            </tr>
+            <tr>
+                <th>TV Serises:</th>
+                <td><span *ngFor="let tv of data.tvSeries">{{tv}}, </span></td>
+            </tr>
+            <tr>
+                <th>Play By:</th>
+                <td>{{data.playBy}}</td>
+            </tr>
+        </table>
+
+        </div>
+        <!-- <div class="right-part">
+            <div>
+                <p>Character</p>
+                <ul *ngFor="let c of data.characters">
+                    <li>{{ c }}</li>
+                </ul>
+            </div>
+        </div> -->
+    </div>
+</div>
+<app-footer></app-footer>
+

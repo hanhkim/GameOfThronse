@@ -4,6 +4,7 @@ import { LoginComponent } from './pages/login/login.component';
 import { OverviewComponent } from './pages/overview/overview.component';
 import { AuthenGuard } from './services/authen/authen.guard';
 import { ResourceComponent } from './pages/resource/resource.component';
+import { ResourceItemComponent } from './pages/resource-item/resource-item.component';
 
 const routes: Routes = [
   {
@@ -20,12 +21,24 @@ const routes: Routes = [
     component: ResourceComponent
   },
   {
+    path: 'houses/:id',
+    component: ResourceItemComponent
+  },
+  {
     path: 'books',
     component: ResourceComponent
   },
   {
+    path: 'books/:id',
+    component: ResourceItemComponent
+  },
+  {
     path: 'characters',
     component: ResourceComponent
+  },
+  {
+    path: 'characters/:id',
+    component: ResourceItemComponent
   },
   {
     path: '**',
