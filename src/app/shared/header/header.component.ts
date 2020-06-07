@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { faSmile } from '@fortawesome/free-solid-svg-icons';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -8,9 +9,15 @@ import { faSmile } from '@fortawesome/free-solid-svg-icons';
 })
 export class HeaderComponent implements OnInit {
   faSmile = faSmile;
-  constructor() { }
+  constructor(
+    private router: Router
+  ) { }
 
   ngOnInit(): void {
   }
 
+  logout() {
+    localStorage.removeItem('currentUser');
+    this.router.navigate(['login']);
+  }
 }

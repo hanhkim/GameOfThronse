@@ -18,27 +18,33 @@ const routes: Routes = [
   },
   {
     path: 'houses',
-    component: ResourceComponent
+    component: ResourceComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: 'houses/:id',
-    component: ResourceItemComponent
+    component: ResourceItemComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: 'books',
-    component: ResourceComponent
+    component: ResourceComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: 'books/:id',
-    component: ResourceItemComponent
+    component: ResourceItemComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: 'characters',
-    component: ResourceComponent
+    component: ResourceComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: 'characters/:id',
-    component: ResourceItemComponent
+    component: ResourceItemComponent,
+    canActivate: [AuthenGuard]
   },
   {
     path: '**',
