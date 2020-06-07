@@ -1,41 +1,71 @@
+@import '../../../assets/scss/variables';
+
 .login-page {
     background-image: url("../../../assets/images/background.png");
     background-repeat: no-repeat;
     background-size: 100%;
     height: 100%;
     padding: 100px;
+    min-width: 1280px;
 
-    .title-app {
-        margin: 0px;
-        position: absolute;
-        top: 30%;
-        color: #ff1798;
-        font-size: 100px;
-        font-family: cursive;
-        outline: none;
-    }
+    .login-box {
+        background: rgba(0, 0, 0, 0.5);
+        width: 1000px;
+        height: 600px;
+        margin: 0 auto;
 
-    .login-form {
-        float: right;
-        min-height: 300px;
-        width: 300px;
-        background-color: #C4C4C4;
-        border-radius: 20px;
-        padding: 50px 35px;
-        display: inline-block;
-        text-align: center;
-        box-sizing: content-box;
-        margin: 0px;
+        .title-section {
+            float: left;
+            width: 50%;
+            height: 100%;  
+            color: $white;
+            position: relative;
+
+            .title-part {
+                position: absolute;
+                top: 35%;
+                left: 10%;
+
+                > p {
+                    font-size: 24px;
+                    padding: 10px 0px;
+                    border-bottom: 3px solid $white;
+                }
+            }
+            
+            .title-app {
+                font-size: 46px;
+                padding: 10px 0px;
+            }
+        }
+
+        .login-section {
+            float: right;
+            width: 50%;
+            height: 100%;
+            background: $green;
+            position: relative;
+        }
+    
+
+        .login-form {
+            min-height: 300px;
+            width: 300px;
+            background-color: #C4C4C4;
+            border-radius: 20px;
+            padding: 50px 35px;
+            text-align: center;
+            box-sizing: content-box;
+            position: absolute;
+            left: 13%;
+            top: 15%;
+        }
 
         .title {
-            color: #187A28;
+            color: $green;
             margin: 0px;
             font-size: 50px;
             line-height: 50px;
-        }
-
-        p {
-            margin: 0px;
         }
 
         input, button {
@@ -47,8 +77,8 @@
             font-size: 18px;
 
             &.btn-style {
-                background-color: green;
-                color: #FFFFFF;
+                background-color: $green;
+                color: $white;
 
                 &:hover {
                     background-color: greenyellow;
