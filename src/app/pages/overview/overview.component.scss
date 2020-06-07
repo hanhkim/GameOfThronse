@@ -1,18 +1,21 @@
+@import '../../../assets/scss/variables';
+
 .body-content {
-    position: relative;
     height: 100%;
     text-align: center;
-    padding: 50px 100px;
 
     .title {
-        color: #187A28;
+        color: $green;
         font-size: 36px;
         font-weight: bold;
-        padding: 50px;
+        height: 150px;
+        line-height: 150px;
     }
     .content-container {
+        min-width: 1000px;
+        height: 400px;
+        line-height: 400px;
         position: relative;
-        width: 100%;
 
         .resource-box {
             width: 300px;
@@ -20,9 +23,19 @@
             height: 300px;
             box-sizing: content-box;
             line-height: 300px;
-            color: #FFFFFF;
+            color: $white;
             font-weight: bold;
             font-size: 36px;
+            position: relative;
+            top: 10%;
+            transition: 0.5s;
+            text-decoration: none;
+            box-shadow: 10px 10px 8px #888888;
+
+            &:hover {
+                transform:scale(1.1, 1.1);
+                top:5%;
+            }
         }
 
         .black-box {
