@@ -12,6 +12,11 @@ const routes: Routes = [
     component: LoginComponent
   },
   {
+    path: '',
+    component: OverviewComponent,
+    canActivate: [AuthenGuard]
+  },
+  {
     path: 'overview',
     component: OverviewComponent,
     canActivate: [AuthenGuard]

@@ -1,6 +1,13 @@
-# GameOfThrones
+# GameOfThrones 
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.1.7.
+
+Go to this site to see: [GameOfThronses] (https://gameofthronses.web.app/) 
+    - Login with (game / game )
+
+## Install WEB
+1. npm install
+2. ng serve --open
 
 ## Development server
 
